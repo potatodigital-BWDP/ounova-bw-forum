@@ -411,41 +411,6 @@
     }
     .why-tagline strong { color: var(--white); font-style: normal; font-weight: 700; }
 
-    /* ====== Packages ====== */
-    #packages { background: var(--off); }
-    .pkg-layout {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: var(--light); margin-top: 3rem;
-    }
-    .pkg-card {
-      background: var(--white);
-      padding: 3rem 2.5rem;
-      position: relative;
-    }
-    .pkg-card.featured { background: var(--black); }
-    .pkg-recommended {
-      font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red);
-      text-transform: uppercase; margin-bottom: 12px;
-    }
-    .pkg-card.featured .pkg-recommended { color: var(--red); }
-    .pkg-name { font-size: 0.82rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray3); margin-bottom: 1rem; }
-    .pkg-card.featured .pkg-name { color: rgba(255,255,255,0.45); }
-    .pkg-price { font-size: 2rem; font-weight: 900; color: var(--black); margin-bottom: 0.3rem; line-height: 1; }
-    .pkg-card.featured .pkg-price { color: var(--white); }
-    .pkg-unit { font-size: 0.78rem; color: var(--gray3); margin-bottom: 2rem; }
-    .pkg-card.featured .pkg-unit { color: rgba(255,255,255,0.4); }
-    .pkg-divider { height: 1px; background: var(--light); margin-bottom: 1.8rem; }
-    .pkg-card.featured .pkg-divider { background: rgba(255,255,255,0.08); }
-    .pkg-list { list-style: none; margin-bottom: 0; }
-    .pkg-list li {
-      font-size: 0.84rem; color: var(--gray2); padding: 8px 0;
-      border-bottom: 1px solid var(--light);
-      display: flex; gap: 10px; align-items: flex-start;
-    }
-    .pkg-card.featured .pkg-list li { color: rgba(255,255,255,0.6); border-bottom-color: rgba(255,255,255,0.06); }
-    .pkg-list li::before { content: '—'; color: var(--red); flex-shrink: 0; }
-    .btn-full { width: 100%; text-align: center; }
-
     /* ====== CTA Section ====== */
     #cta {
       background: var(--black);
@@ -547,7 +512,6 @@
       .data-grid { grid-template-columns: 1fr; }
       .iot-layout { grid-template-columns: 1fr; gap: 3rem; }
       .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .pkg-layout { grid-template-columns: 1fr; }
       .f-item { grid-template-columns: 60px 1fr; }
       .f-arrow { display: none; }
       nav { padding: 0 4%; }
@@ -573,7 +537,6 @@
     <a href="#milestone">品牌里程</a>
     <a href="#data">數據實證</a>
     <a href="#forum">論壇單元</a>
-    <a href="#packages">合作方案</a>
   </div>
   <div class="nav-partner" style="display:flex;align-items:center;gap:10px">
     <span style="font-size:0.72rem;color:var(--gray3);letter-spacing:0.08em">×</span>
@@ -968,54 +931,6 @@
   </div>
 </section>
 
-<!-- ====== Packages ====== -->
-<section id="packages">
-  <div class="section-label reveal">Cooperation Packages</div>
-  <h2 class="section-title reveal">三大合作方案</h2>
-  <div class="rule reveal"></div>
-  <p class="subtitle reveal">依據您的品牌目標與預算，選擇最適合的傳播組合，以精準受眾實現最大影響力。</p>
-  <div class="pkg-layout">
-    <div class="pkg-card reveal">
-      <div class="pkg-name">Standard</div>
-      <div class="pkg-price">NT$1,673,000</div>
-      <div class="pkg-unit">起 · 含稅</div>
-      <div class="pkg-divider"></div>
-      <ul class="pkg-list">
-        <li>WOW 影片系列製作</li>
-        <li>商周企業精選訪談</li>
-        <li>商周大調查機制</li>
-        <li>線上數位傳播</li>
-      </ul>
-    </div>
-    <div class="pkg-card featured reveal">
-      <div class="pkg-recommended">Most Popular</div>
-      <div class="pkg-name" style="color:rgba(255,255,255,.45)">Premium</div>
-      <div class="pkg-price">NT$2,389,000</div>
-      <div class="pkg-unit">起 · 含稅</div>
-      <div class="pkg-divider"></div>
-      <ul class="pkg-list">
-        <li>Standard 方案全部內容</li>
-        <li>企業訪談影片加製</li>
-        <li>深度專題報導</li>
-        <li>社群媒體擴散</li>
-        <li>ESG 白皮書聯名發布</li>
-      </ul>
-    </div>
-    <div class="pkg-card reveal">
-      <div class="pkg-name">Flagship</div>
-      <div class="pkg-price">NT$4,395,000</div>
-      <div class="pkg-unit">起 · 含稅</div>
-      <div class="pkg-divider"></div>
-      <ul class="pkg-list">
-        <li>Premium 方案全部內容</li>
-        <li>專屬論壇主辦（50 人邀請制）</li>
-        <li>業界思想領袖交流</li>
-        <li>B2B 最後一哩轉換</li>
-        <li>完整生態系傳播佈局</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
 <!-- ====== CTA ====== -->
 <section id="cta">
