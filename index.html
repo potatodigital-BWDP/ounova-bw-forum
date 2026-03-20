@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東涌 10 週年 × 商周 ｜ 真數據・真節能 ESG 永續建築論壇</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ====== Reset & Variables ====== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red:     #cf0213;
+      --red2:    #a8000f;
+      --red3:    #ff1a2e;
+      --red-bg:  rgba(207, 2, 19, 0.06);
+      --black:   #111111;
+      --dark:    #222222;
+      --gray1:   #444444;
+      --gray2:   #666666;
+      --gray3:   #999999;
+      --gray4:   #cccccc;
+      --light:   #ededed;
+      --white:   #ffffff;
+      --off:     #f8f7f5;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Yantramanav', 'Noto Sans TC', 'PingFang TC', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ====== Navbar ====== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: var(--white);
+      border-bottom: 1px solid var(--light);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--red);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 900; color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .logo-text { line-height: 1.15; }
+    .logo-zh { font-size: 1.05rem; font-weight: 700; color: var(--black); letter-spacing: 0.05em; }
+    .logo-en { font-size: 0.65rem; font-weight: 400; color: var(--gray3); letter-spacing: 0.18em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 2.2rem; font-size: 0.88rem; color: var(--gray1); font-weight: 500; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta {
+      background: var(--red); color: var(--white);
+      padding: 10px 22px; font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--red2); }
+    .nav-partner {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.72rem; color: var(--gray3); letter-spacing: 0.08em;
+      margin-right: 1.5rem;
+    }
+    .nav-partner-divider { width: 1px; height: 16px; background: var(--light); }
+    .nav-partner span { color: var(--gray1); font-weight: 600; }
+
+    /* ====== Section Utilities ====== */
+    section { padding: 96px 10%; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 12px; font-weight: 500;
+    }
+    h2.section-title {
+      font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+      font-weight: 900; color: var(--black);
+      line-height: 1.2; margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: 1rem; color: var(--gray2);
+      max-width: 640px; margin-bottom: 3rem;
+      font-weight: 300; line-height: 1.9;
+    }
+    .rule {
+      width: 40px; height: 2px; background: var(--red);
+      margin-bottom: 2rem;
+    }
+
+    /* ====== Hero ====== */
+    #hero {
+      min-height: 100vh;
+      padding-top: 68px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 0;
+      overflow: hidden;
+    }
+    .hero-left {
+      padding: 80px 6% 80px 10%;
+      background: var(--white);
+    }
+    .hero-right {
+      background-color: var(--red);
+      background-image: linear-gradient(rgba(207,2,19,0.80), rgba(207,2,19,0.80)),
+        url('https://www.dyhot.com.tw/files/resize/1920/5cf05767ab398ea47afa97dfc381716f.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 80px 8%;
+      position: relative; overflow: hidden;
+    }
+    .hero-right::before {
+      content: 'OUNOVA';
+      position: absolute; bottom: -20px; right: -20px;
+      font-size: 9rem; font-weight: 900; color: rgba(255,255,255,0.06);
+      letter-spacing: -0.05em; line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--red); font-weight: 500;
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 24px; height: 1.5px; background: var(--red);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 900; color: var(--black);
+      line-height: 1.15; margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .h1-red { color: var(--red); }
+    .hero-desc {
+      font-size: 1rem; color: var(--gray2); margin-bottom: 2.5rem;
+      max-width: 460px; line-height: 1.9; font-weight: 300;
+    }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-solid {
+      background: var(--red); color: var(--white);
+      padding: 14px 32px; font-weight: 700; font-size: 0.88rem;
+      letter-spacing: 0.05em; transition: background .2s; cursor: pointer;
+      border: none; display: inline-block;
+    }
+    .btn-solid:hover { background: var(--red2); }
+    .btn-outline {
+      background: transparent; border: 1.5px solid var(--black);
+      color: var(--black); padding: 14px 32px;
+      font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em;
+      transition: all .2s; cursor: pointer; display: inline-block;
+    }
+    .btn-outline:hover { background: var(--black); color: var(--white); }
+    .btn-outline-white {
+      background: transparent; border: 1.5px solid rgba(255,255,255,0.5);
+      color: var(--white); padding: 14px 32px;
+      font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em;
+      transition: all .2s; cursor: pointer; display: inline-block;
+    }
+    .btn-outline-white:hover { background: var(--white); color: var(--red); border-color: var(--white); }
+
+    .hero-stats {
+      margin-top: 3.5rem; display: flex; flex-direction: column; gap: 2rem;
+    }
+    .stat-item { border-left: 2px solid rgba(255,255,255,0.25); padding-left: 1.2rem; }
+    .stat-num { font-size: 2.6rem; font-weight: 900; color: var(--white); line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-top: 4px; letter-spacing: 0.06em; }
+
+    .hero-right-title {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 3rem; font-weight: 500;
+    }
+    .hero-stats-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2rem; width: 100%;
+    }
+    .hero-badge-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.85); font-size: 0.75rem; letter-spacing: 0.1em;
+      padding: 8px 16px; margin-bottom: 2rem;
+    }
+    .hero-badge-white .dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--white); animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; }  50% { opacity: 0.3; }
+    }
+
+    /* ====== Ticker Bar ====== */
+    .ticker {
+      background: var(--black);
+      padding: 12px 0; overflow: hidden;
+    }
+    .ticker-inner {
+      display: flex; gap: 4rem; animation: ticker 20s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 1.5rem;
+    }
+    .ticker-item .tick-accent { color: var(--red); }
+    .ticker-item::after { content: '◆'; color: var(--red); font-size: 0.4rem; }
+
+    /* ====== Milestone ====== */
+    #milestone { background: var(--off); }
+    .milestone-layout {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 6rem; align-items: start; margin-top: 2rem;
+    }
+    .milestone-intro .section-label { margin-bottom: 8px; }
+    .milestone-intro h2 { margin-bottom: 1rem; }
+    .milestone-cards { display: flex; flex-direction: column; gap: 1px; }
+    .m-card {
+      background: var(--white);
+      display: grid; grid-template-columns: 100px 1fr;
+      align-items: stretch;
+    }
+    .m-card-num {
+      background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem; font-weight: 900; color: var(--white);
+      padding: 2rem;
+    }
+    .m-card-body { padding: 2rem 2.5rem; border-left: none; }
+    .m-card-tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+    .m-card-title { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+    .m-card-text { font-size: 0.84rem; color: var(--gray2); line-height: 1.7; }
+
+    /* ====== Pain Points ====== */
+    #pain { background: var(--white); }
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; margin-top: 2rem; background: var(--light);
+    }
+    .pain-card {
+      background: var(--white);
+      padding: 3rem;
+      transition: background .3s;
+    }
+    .pain-card:hover { background: var(--off); }
+    .pain-icon {
+      width: 48px; height: 48px;
+      border: 1.5px solid var(--red);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.5rem;
+    }
+    .pain-num { font-size: 0.68rem; color: var(--red); letter-spacing: 0.15em; margin-bottom: 10px; }
+    .pain-title { font-size: 1.05rem; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+    .pain-text { font-size: 0.85rem; color: var(--gray2); line-height: 1.8; }
+
+    /* ====== Data ====== */
+    #data { background: var(--black); color: var(--white); }
+    #data h2.section-title { color: var(--white); }
+    #data .subtitle { color: rgba(255,255,255,0.5); }
+    #data .section-label { color: var(--red); }
+    .data-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; margin-top: 3rem; background: rgba(255,255,255,0.05);
+    }
+    .data-panel { padding: 3rem; background: var(--black); }
+    .data-panel.light-panel { background: #1a1a1a; }
+    .data-panel-head {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      margin-bottom: 2rem; padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .data-panel.light-panel .data-panel-head { color: var(--gray3); }
+    .data-panel:not(.light-panel) .data-panel-head { color: var(--red); }
+    .data-panel-title { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 2rem; }
+    .data-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      margin-bottom: 2rem; padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .data-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .d-val {
+      font-size: 2.2rem; font-weight: 900; line-height: 1;
+      min-width: 90px; flex-shrink: 0;
+    }
+    .data-panel.light-panel .d-val { color: rgba(255,255,255,0.6); }
+    .data-panel:not(.light-panel) .d-val { color: var(--red); }
+    .d-title { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .d-desc { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
+
+    /* ====== Forum ====== */
+    #forum { background: var(--off); }
+    .forum-list { margin-top: 3rem; }
+    .f-item {
+      display: grid; grid-template-columns: 80px 1fr auto;
+      align-items: center; gap: 3rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--light);
+      transition: all .3s; cursor: default;
+    }
+    .f-item:last-child { border-bottom: 1px solid var(--light); }
+    .f-item:hover { padding-left: 1rem; }
+    .f-num {
+      font-size: 3rem; font-weight: 900;
+      color: var(--light); line-height: 1;
+      transition: color .3s;
+    }
+    .f-item:hover .f-num { color: var(--red); }
+    .f-tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+    .f-title { font-size: 1.15rem; font-weight: 700; color: var(--black); margin-bottom: 6px; }
+    .f-text { font-size: 0.84rem; color: var(--gray2); line-height: 1.7; max-width: 520px; }
+    .f-arrow {
+      width: 40px; height: 40px; border: 1.5px solid var(--light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--gray4);
+      transition: all .3s; flex-shrink: 0;
+    }
+    .f-item:hover .f-arrow { border-color: var(--red); color: var(--red); }
+
+    /* ====== IOT ====== */
+    #iot { background: var(--white); }
+    .iot-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center; margin-top: 2rem;
+    }
+    .iot-feat-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
+    .iot-feat { display: flex; gap: 1.5rem; align-items: flex-start; }
+    .iot-feat-icon {
+      width: 48px; height: 48px; background: var(--red-bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .iot-feat-title { font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+    .iot-feat-text { font-size: 0.82rem; color: var(--gray2); line-height: 1.7; }
+    /* Dashboard mockup */
+    .dashboard {
+      background: var(--black);
+      padding: 0; overflow: hidden;
+    }
+    .dash-header {
+      background: var(--red);
+      padding: 1.2rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .dash-header-title { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--white); text-transform: uppercase; }
+    .dash-live {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.65rem; color: rgba(255,255,255,0.8);
+    }
+    .dash-live-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--white);
+      animation: pulse 2s infinite;
+    }
+    .dash-body { padding: 1.5rem; }
+    .dash-metric { margin-bottom: 1.2rem; }
+    .dash-metric-row {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 5px;
+    }
+    .dash-metric-name { font-size: 0.72rem; color: rgba(255,255,255,0.45); }
+    .dash-metric-val { font-size: 0.78rem; font-weight: 700; color: var(--white); }
+    .dash-bar-bg { height: 4px; background: rgba(255,255,255,0.07); }
+    .dash-bar-fill { height: 100%; background: var(--red); }
+    .dash-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 1.2rem 0; }
+    .dash-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .dash-footer-label { font-size: 0.65rem; color: rgba(255,255,255,0.3); }
+    .dash-status { font-size: 0.65rem; color: var(--red); display: flex; align-items: center; gap: 5px; }
+
+    /* ====== Why / Audience ====== */
+    #why { background: var(--red); color: var(--white); }
+    #why h2.section-title { color: var(--white); }
+    #why .subtitle { color: rgba(255,255,255,0.65); }
+    #why .section-label { color: rgba(255,255,255,0.6); }
+    #why .rule { background: rgba(255,255,255,0.4); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.15);
+      margin-top: 3rem;
+    }
+    .why-card {
+      background: var(--red);
+      padding: 3rem 2rem; text-align: center;
+      transition: background .3s;
+    }
+    .why-card:hover { background: var(--red2); }
+    .why-big { font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1; margin-bottom: 6px; }
+    .why-label { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+    .why-tagline {
+      margin-top: 4rem; text-align: center;
+      font-size: 1.1rem; color: rgba(255,255,255,0.75);
+      font-weight: 300; font-style: italic;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 3rem;
+    }
+    .why-tagline strong { color: var(--white); font-style: normal; font-weight: 700; }
+
+    /* ====== Packages ====== */
+    #packages { background: var(--off); }
+    .pkg-layout {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--light); margin-top: 3rem;
+    }
+    .pkg-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      position: relative;
+    }
+    .pkg-card.featured { background: var(--black); }
+    .pkg-recommended {
+      font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red);
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .pkg-card.featured .pkg-recommended { color: var(--red); }
+    .pkg-name { font-size: 0.82rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray3); margin-bottom: 1rem; }
+    .pkg-card.featured .pkg-name { color: rgba(255,255,255,0.45); }
+    .pkg-price { font-size: 2rem; font-weight: 900; color: var(--black); margin-bottom: 0.3rem; line-height: 1; }
+    .pkg-card.featured .pkg-price { color: var(--white); }
+    .pkg-unit { font-size: 0.78rem; color: var(--gray3); margin-bottom: 2rem; }
+    .pkg-card.featured .pkg-unit { color: rgba(255,255,255,0.4); }
+    .pkg-divider { height: 1px; background: var(--light); margin-bottom: 1.8rem; }
+    .pkg-card.featured .pkg-divider { background: rgba(255,255,255,0.08); }
+    .pkg-list { list-style: none; margin-bottom: 0; }
+    .pkg-list li {
+      font-size: 0.84rem; color: var(--gray2); padding: 8px 0;
+      border-bottom: 1px solid var(--light);
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .pkg-card.featured .pkg-list li { color: rgba(255,255,255,0.6); border-bottom-color: rgba(255,255,255,0.06); }
+    .pkg-list li::before { content: '—'; color: var(--red); flex-shrink: 0; }
+    .btn-full { width: 100%; text-align: center; }
+
+    /* ====== CTA Section ====== */
+    #cta {
+      background: var(--black);
+      padding: 120px 10%; text-align: center;
+    }
+    #cta .section-label { color: rgba(255,255,255,0.4); text-align: center; }
+    #cta h2 { color: var(--white); }
+    #cta .subtitle { color: rgba(255,255,255,0.45); margin: 0 auto 3rem; text-align: center; }
+    .cta-quote {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 300; color: rgba(255,255,255,0.55);
+      line-height: 1.8; margin-bottom: 3rem; font-style: italic;
+    }
+    .cta-quote em { color: var(--red); font-style: normal; font-weight: 700; }
+
+    /* ====== Footer ====== */
+    footer {
+      background: var(--red);
+      padding: 2rem 10%;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .foot-logo { display: flex; align-items: center; gap: 10px; }
+    .foot-logo-mark {
+      width: 28px; height: 28px; background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 900; color: var(--red);
+    }
+    .foot-logo-text { font-size: 0.88rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; }
+    .foot-copy { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
+    .foot-tag { font-size: 0.72rem; color: rgba(255,255,255,0.8); letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* ====== Photo Strip ====== */
+    .photo-strip {
+      background: var(--black);
+      overflow: hidden;
+    }
+    .photo-strip-inner {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .photo-strip-item {
+      position: relative; overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .photo-strip-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+      display: block;
+    }
+    .photo-strip-item:hover img { transform: scale(1.05); }
+    .photo-strip-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: var(--white); font-size: 0.75rem; letter-spacing: 0.1em;
+      padding: 2rem 1.2rem 1rem;
+      opacity: 0; transition: opacity .3s;
+    }
+    .photo-strip-item:hover .photo-strip-caption { opacity: 1; }
+
+    /* ====== Case Gallery ====== */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr;
+      gap: 3px; margin-top: 3rem;
+    }
+    .case-item { position: relative; overflow: hidden; }
+    .case-item-tall { }
+    .case-img-wrap {
+      width: 100%; aspect-ratio: 4/3; overflow: hidden;
+    }
+    .case-item-tall .case-img-wrap { aspect-ratio: 4/3; }
+    .case-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block; transition: transform .6s ease;
+      filter: brightness(0.85);
+    }
+    .case-item:hover .case-img-wrap img { transform: scale(1.04); filter: brightness(1); }
+    .case-label {
+      padding: 1.2rem 0 0;
+    }
+    .case-tag { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--red); text-transform: uppercase; margin-bottom: 4px; }
+    .case-name { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.75); }
+
+    /* ====== Scroll Reveal ====== */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-l { opacity: 0; transform: translateX(-24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-l.visible { opacity: 1; transform: translateX(0); }
+    .reveal-r { opacity: 0; transform: translateX(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-r.visible { opacity: 1; transform: translateX(0); }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 50vh; }
+      .hero-stats-row { grid-template-columns: 1fr 1fr; }
+      .milestone-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .data-grid { grid-template-columns: 1fr; }
+      .iot-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .pkg-layout { grid-template-columns: 1fr; }
+      .f-item { grid-template-columns: 60px 1fr; }
+      .f-arrow { display: none; }
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      section { padding: 70px 5%; }
+      .photo-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .cases-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== Navbar ====== -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark">東</div>
+    <div class="logo-text">
+      <div class="logo-zh">東涌 OUNOVA</div>
+      <div class="logo-en">東湧實業股份有限公司</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#milestone">品牌里程</a>
+    <a href="#data">數據實證</a>
+    <a href="#forum">論壇單元</a>
+    <a href="#packages">合作方案</a>
+  </div>
+  <div class="nav-partner" style="display:flex;align-items:center;gap:10px">
+    <span style="font-size:0.72rem;color:var(--gray3);letter-spacing:0.08em">×</span>
+    <img src="BWlogo-red.svg" alt="商業周刊" style="height:28px;display:block">
+  </div>
+</nav>
+
+<!-- ====== Ticker ====== -->
+<div class="ticker" style="margin-top:68px">
+  <div class="ticker-inner">
+    <span class="ticker-item">Innovation <span class="tick-accent">創新</span></span>
+    <span class="ticker-item">Energy Efficiency <span class="tick-accent">節能</span></span>
+    <span class="ticker-item">Safety <span class="tick-accent">安全</span></span>
+    <span class="ticker-item">ESG <span class="tick-accent">永續</span></span>
+    <span class="ticker-item">10th Anniversary <span class="tick-accent">十週年</span></span>
+    <span class="ticker-item">98% Thermal Efficiency <span class="tick-accent">熱效率</span></span>
+    <span class="ticker-item">Innovation <span class="tick-accent">創新</span></span>
+    <span class="ticker-item">Energy Efficiency <span class="tick-accent">節能</span></span>
+    <span class="ticker-item">Safety <span class="tick-accent">安全</span></span>
+    <span class="ticker-item">ESG <span class="tick-accent">永續</span></span>
+    <span class="ticker-item">10th Anniversary <span class="tick-accent">十週年</span></span>
+    <span class="ticker-item">98% Thermal Efficiency <span class="tick-accent">熱效率</span></span>
+  </div>
+</div>
+
+<!-- ====== Hero ====== -->
+<section id="hero" style="padding:0;margin-top:0">
+  <div class="hero-left">
+    <div class="hero-eyebrow reveal">東涌 × 商業周刊 · 2025</div>
+    <h1 class="reveal">
+      <span class="h1-red">真數據・</span>真節能<br>ESG 永續<br>建築論壇
+    </h1>
+    <p class="hero-desc reveal">
+      從實驗室研究到現場驗證，攜手商業周刊，揭示建築熱水能效的真相。
+      十年累積，重新定義台灣頂級建築的用水標準。
+    </p>
+  </div>
+  <div class="hero-right">
+    <div class="hero-badge-white reveal">
+      <span class="dot"></span>
+      10th Anniversary × Business Weekly
+    </div>
+    <div class="hero-right-title reveal">Key Performance Indicators</div>
+    <div class="hero-stats-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">熱效率<br>超越甲級標準</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">–50%</div>
+        <div class="stat-label">旅館年均<br>瓦斯費節省</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">–70%</div>
+        <div class="stat-label">機房<br>佔用空間</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">MTBF<br>故障間隔延長</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Brand Milestone ====== -->
+<section id="milestone">
+  <div class="milestone-layout">
+    <div class="milestone-intro">
+      <div class="section-label reveal">Brand Milestone</div>
+      <h2 class="section-title reveal">雙品牌<br>雙十年<br>里程碑</h2>
+      <div class="rule reveal"></div>
+      <p class="subtitle reveal">
+        兩個立志改變行業的品牌，在各自的十年旅程後，以數據為橋，共同引領台灣建築節能的下一個世代。
+      </p>
+    </div>
+    <div class="milestone-cards reveal">
+      <div class="m-card">
+        <div class="m-card-num" style="background:var(--red)">50</div>
+        <div class="m-card-body">
+          <div class="m-card-tag">Grand Home Group</div>
+          <div class="m-card-title">關中集團創立 50 週年</div>
+          <div class="m-card-text">戶外生活與熱水設備全球領導品牌，深耕台灣半世紀，將卓越品質與匠人精神帶入每一個家庭與建築工程之中。</div>
+        </div>
+      </div>
+      <div class="m-card">
+        <div class="m-card-num">10</div>
+        <div class="m-card-body">
+          <div class="m-card-tag">Ounova 東涌</div>
+          <div class="m-card-title">東涌品牌成立 10 週年</div>
+          <div class="m-card-text">專為台灣獨特環境打造——硬水問題、南北氣候差異、老舊建築配管挑戰——以全預混冷凝技術解決本地痛點，成為台灣唯一可外銷歐美的熱水器品牌。</div>
+        </div>
+      </div>
+      <div class="m-card">
+        <div class="m-card-num" style="background:var(--dark)">×</div>
+        <div class="m-card-body">
+          <div class="m-card-tag">Business Weekly × Ounova</div>
+          <div class="m-card-title">商業周刊 × 東涌 策略合作</div>
+          <div class="m-card-text">台灣唯一精準觸達頂端決策者的媒體平台，聯手十年數據積累的節能品牌，以最具公信力的見證，為 1% 的決策者提供 ESG 解決方案。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Pain Points ====== -->
+<section id="pain">
+  <div style="max-width:640px">
+    <div class="section-label reveal">ESG Pain Points</div>
+    <h2 class="section-title reveal">您的 ESG 數據，漏掉了「熱水能耗」？</h2>
+    <div class="rule reveal"></div>
+    <p class="subtitle reveal">在追求 ESG 認證與碳中和目標的過程中，建築熱水系統的能耗往往是最容易被忽略、卻佔比最高的環節。</p>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card reveal">
+      <div class="pain-icon">⚠</div>
+      <div class="pain-num">01 — Pain Point</div>
+      <div class="pain-title">假節能陷阱</div>
+      <div class="pain-text">傳統設備宣稱達到甲級標準，但實際現場運行效率往往與實驗數據相差 30% 以上，ESG 報告數字失真，碳排核算出現嚴重偏差。</div>
+    </div>
+    <div class="pain-card reveal">
+      <div class="pain-icon">📊</div>
+      <div class="pain-num">02 — Pain Point</div>
+      <div class="pain-title">數據缺口</div>
+      <div class="pain-text">缺乏連續、可驗證的現場數據，無法真實呈現建築熱水系統對企業碳排放的貢獻，嚴重影響 ESG 評等與永續報告書的公信力。</div>
+    </div>
+    <div class="pain-card reveal">
+      <div class="pain-icon">⚖</div>
+      <div class="pain-num">03 — Pain Point</div>
+      <div class="pain-title">舒適與節能的假兩難</div>
+      <div class="pain-text">過去的節能方案往往犧牲用水舒適度，讓決策者在住客體驗與永續目標之間難以取捨，最終放棄節能升級。</div>
+    </div>
+    <div class="pain-card reveal">
+      <div class="pain-icon">🔧</div>
+      <div class="pain-num">04 — Pain Point</div>
+      <div class="pain-title">維護成本黑洞</div>
+      <div class="pain-text">傳統熱水系統缺乏數位監控，故障難以預測，緊急維修成本高，停機影響住客體驗，間接損害品牌聲譽與營收。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Product Photo Strip ====== -->
+<div class="photo-strip">
+  <div class="photo-strip-inner">
+    <div class="photo-strip-item">
+      <img src="https://www.dyhot.com.tw/files/resize/1280/5d3baa05f827c86037faa50970f34ad6.jpg" alt="高效能產品展示" loading="lazy">
+      <div class="photo-strip-caption">高效能冷凝系統</div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://www.dyhot.com.tw/files/resize/1920/9cd98c47d9123be766e1caf24eff90b8.jpg" alt="潔淨燃燒技術" loading="lazy">
+      <div class="photo-strip-caption">全預混潔淨燃燒</div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://www.dyhot.com.tw/files/resize/1280/4d4e631ae8a9b0faf4ad103a0528c26a.jpg" alt="安全環保效益" loading="lazy">
+      <div class="photo-strip-caption">安全 · 環保 · ESG</div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://www.dyhot.com.tw/files/resize/1280/3e724cbfbae96760fef49202e5a5523d.jpg" alt="連續熱水供應" loading="lazy">
+      <div class="photo-strip-caption">24H 恆溫熱水供應</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Data Evidence ====== -->
+<section id="data">
+  <div class="section-label reveal">Dual-Track Evidence</div>
+  <h2 class="section-title reveal">雙軌驗證數據<br>實驗室 × 現場運營</h2>
+  <div class="rule reveal" style="background:rgba(255,255,255,0.25)"></div>
+  <p class="subtitle reveal">真數據是碳中和的唯一路徑。東涌以十年現場數據，讓 ESG 承諾不再只是口號。</p>
+  <div class="data-grid">
+    <div class="data-panel light-panel">
+      <div class="data-panel-head">Module A ｜ Laboratory Controlled Research</div>
+      <div class="data-panel-title reveal">技術超越甲級能效</div>
+      <div class="data-row reveal">
+        <div class="d-val">98%</div>
+        <div><div class="d-title">熱效率</div><div class="d-desc">全預混冷凝技術，遠超台灣甲級標準 80%</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">&lt;50</div>
+        <div><div class="d-title">CO 排放 ppm</div><div class="d-desc">法規標準 1400ppm，東涌達成 &lt;50ppm，ESG 低污染指標</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">≈0</div>
+        <div><div class="d-title">待機能耗損失</div><div class="d-desc">專利陶瓷燃燒腔體，待機熱損失趨近於零</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">10K+</div>
+        <div><div class="d-title">小時耐壓測試</div><div class="d-desc">硬水環境持續加壓，零水垢效率衰退驗證</div></div>
+      </div>
+    </div>
+    <div class="data-panel">
+      <div class="data-panel-head">Module B ｜ Field Operational Data</div>
+      <div class="data-panel-title reveal">現場十年實證節能</div>
+      <div class="data-row reveal">
+        <div class="d-val">–50%</div>
+        <div><div class="d-title">旅館/長照年度瓦斯費</div><div class="d-desc">對比傳統鍋爐，年均節省 30–50%</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">–40%</div>
+        <div><div class="d-title">豪宅循環系統能耗</div><div class="d-desc">解決傳統循環系統重啟能耗損失</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">–70%</div>
+        <div><div class="d-title">機房佔用空間</div><div class="d-desc">釋放屋頂空間，提升建築景觀附加價值</div></div>
+      </div>
+      <div class="data-row reveal">
+        <div class="d-val">2×</div>
+        <div><div class="d-title">MTBF 平均故障間隔</div><div class="d-desc">搭配雲端監控，100% 數據傳輸全可視化</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Forum ====== -->
+<section id="forum">
+  <div class="section-label reveal">Forum Program</div>
+  <h2 class="section-title reveal">四大論壇單元</h2>
+  <div class="rule reveal"></div>
+  <p class="subtitle reveal">從 ESG 趨勢洞察到現場實戰案例，完整串聯決策者的認知建立、價值驗證與採購轉化。</p>
+  <div class="forum-list">
+    <div class="f-item reveal">
+      <div class="f-num">01</div>
+      <div>
+        <div class="f-tag">ESG Wave</div>
+        <div class="f-title">ESG 浪潮與建築真相圓桌</div>
+        <div class="f-text">由商業周刊資深主編主持，邀集建築業、旅宿業、長照機構代表，共同解構「熱水系統」在 ESG 報告中的數據盲區與改善契機。</div>
+      </div>
+      <div class="f-arrow">→</div>
+    </div>
+    <div class="f-item reveal">
+      <div class="f-num">02</div>
+      <div>
+        <div class="f-tag">Data Expertise</div>
+        <div class="f-title">數據專題：從實驗室到現場的能效校準</div>
+        <div class="f-text">白皮書現場發布，揭示東涌十年雙軌驗證數據。以真實的旅館、豪宅、醫療機構案例，示範如何將能效數據整合入 ESG 永續報告書。</div>
+      </div>
+      <div class="f-arrow">→</div>
+    </div>
+    <div class="f-item reveal">
+      <div class="f-num">03</div>
+      <div>
+        <div class="f-tag">Livable Architecture</div>
+        <div class="f-title">宜居建築：全齡健康水療與安全革命</div>
+        <div class="f-text">探討高齡化社會下，熱水系統在健康管理、防燙傷安全、恆溫舒適體驗中的關鍵角色，呈現節能與品質生活並行不悖的解決方案。</div>
+      </div>
+      <div class="f-arrow">→</div>
+    </div>
+    <div class="f-item reveal">
+      <div class="f-num">04</div>
+      <div>
+        <div class="f-tag">Real Combat Workshop</div>
+        <div class="f-title">實戰工作坊：旗艦案例全解析</div>
+        <div class="f-text">以五星旅館、豪宅大樓、長期照護機構為案例，現場拆解導入東涌系統前後的能耗對比、維護成本變化與 ESG 評分提升實績。</div>
+      </div>
+      <div class="f-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Case Gallery ====== -->
+<section id="cases" style="background:var(--black);padding:80px 10%">
+  <div class="section-label reveal" style="color:rgba(255,255,255,.4)">Real Cases</div>
+  <h2 class="section-title reveal" style="color:var(--white)">旗艦實績案例</h2>
+  <div class="rule reveal" style="background:rgba(255,255,255,.2)"></div>
+  <p class="subtitle reveal" style="color:rgba(255,255,255,.45)">橫跨旅宿、豪宅、商業空間，十年來累積跨業種的現場驗證數據。</p>
+  <div class="cases-grid reveal">
+    <div class="case-item">
+      <div class="case-img-wrap">
+        <img src="https://www.dyhot.com.tw/files/resize/1280/ddf24c7865de2f7efdbade0698bc64cf.jpg" alt="露營區案例" loading="lazy">
+      </div>
+      <div class="case-label">
+        <div class="case-tag">Outdoor · Camping</div>
+        <div class="case-name">露營區熱水系統</div>
+      </div>
+    </div>
+    <div class="case-item case-item-tall">
+      <div class="case-img-wrap">
+        <img src="https://www.dyhot.com.tw/files/resize/1280/4ed376723815d72da54d344878557020.jpg" alt="豪宅住宅案例" loading="lazy">
+      </div>
+      <div class="case-label">
+        <div class="case-tag">Luxury · Residential</div>
+        <div class="case-name">高雄豪宅大樓</div>
+      </div>
+    </div>
+    <div class="case-item">
+      <div class="case-img-wrap">
+        <img src="https://www.dyhot.com.tw/files/resize/1280/1e57e52dfc7a5cd9e6aafc8dc7ba760b.jpg" alt="商業空間案例" loading="lazy">
+      </div>
+      <div class="case-label">
+        <div class="case-tag">Commercial · Salon</div>
+        <div class="case-name">商業空間熱水系統</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== IOT ====== -->
+<section id="iot">
+  <div class="section-label reveal">Digital Empowerment</div>
+  <h2 class="section-title reveal">數位賦能<br>智慧監控 × 預測維護</h2>
+  <div class="rule reveal"></div>
+  <div class="iot-layout">
+    <div>
+      <p class="subtitle" style="margin-bottom:2.5rem">
+        東涌不只提供產品規格，更提供可持續管理的「永續資產」。透過全廠區 IoT 監控，讓每一度節省的能源都成為可追溯的 ESG 貢獻。
+      </p>
+      <div class="iot-feat-list">
+        <div class="iot-feat reveal">
+          <div class="iot-feat-icon">📡</div>
+          <div>
+            <div class="iot-feat-title">IoT 全廠即時監控</div>
+            <div class="iot-feat-text">溫度、壓力、流量 100% 雲端傳輸，異常預警秒級響應，多點設施統一管理。</div>
+          </div>
+        </div>
+        <div class="iot-feat reveal">
+          <div class="iot-feat-icon">🔮</div>
+          <div>
+            <div class="iot-feat-title">AI 預測性維護</div>
+            <div class="iot-feat-text">分析設備老化曲線，在故障發生前 2–4 週預警，MTBF 延長 2 倍，緊急維修轉化為計劃性保養。</div>
+          </div>
+        </div>
+        <div class="iot-feat reveal">
+          <div class="iot-feat-icon">📋</div>
+          <div>
+            <div class="iot-feat-title">ESG 報告自動整合</div>
+            <div class="iot-feat-text">直接輸出符合國際標準的能耗數據報表，無縫對接 ESG 永續報告書，節省人工盤點成本。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard reveal">
+      <div class="dash-header">
+        <div class="dash-header-title">Ounova Live Dashboard</div>
+        <div class="dash-live"><div class="dash-live-dot"></div>即時傳輸中</div>
+      </div>
+      <div class="dash-body">
+        <div class="dash-metric">
+          <div class="dash-metric-row"><span class="dash-metric-name">熱效率</span><span class="dash-metric-val">98.2%</span></div>
+          <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:98%"></div></div>
+        </div>
+        <div class="dash-metric">
+          <div class="dash-metric-row"><span class="dash-metric-name">CO 排放量 (ppm)</span><span class="dash-metric-val">42 ppm</span></div>
+          <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:3%"></div></div>
+        </div>
+        <div class="dash-metric">
+          <div class="dash-metric-row"><span class="dash-metric-name">年度累積節能 (MJ)</span><span class="dash-metric-val">127,450</span></div>
+          <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:74%"></div></div>
+        </div>
+        <div class="dash-metric">
+          <div class="dash-metric-row"><span class="dash-metric-name">設備健康指數</span><span class="dash-metric-val">96%</span></div>
+          <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:96%"></div></div>
+        </div>
+        <div class="dash-metric">
+          <div class="dash-metric-row"><span class="dash-metric-name">累積減碳量 (tCO₂e)</span><span class="dash-metric-val">48.7 噸</span></div>
+          <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:65%"></div></div>
+        </div>
+      </div>
+      <div class="dash-divider"></div>
+      <div class="dash-footer">
+        <div class="dash-footer-label">最後更新 · 2025-09-01 09:42 AM</div>
+        <div class="dash-status"><div class="dash-live-dot"></div>All systems operational</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Why / Audience ====== -->
+<section id="why">
+  <div class="section-label reveal">Why Partner</div>
+  <h2 class="section-title reveal">精準觸達 1% 頂端決策者</h2>
+  <div class="rule reveal"></div>
+  <p class="subtitle reveal">商業周刊——台灣唯一同時觸達頂級信用卡持卡人、豪宅居住者與企業主的媒體平台，為東涌背書，為 ESG 解決方案認證。</p>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-big" data-count="35815">0</div>
+      <div class="why-label">頂級信用卡<br>持有人讀者</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-big" data-count="17139">0</div>
+      <div class="why-label">豪宅居住者<br>訂閱用戶</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-big" data-count="119637">0</div>
+      <div class="why-label">企業主與<br>高階主管讀者</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-big">50<span style="font-size:1.5rem;font-weight:300;opacity:.7">位</span></div>
+      <div class="why-label">專屬論壇邀請制<br>業界思想領袖</div>
+    </div>
+  </div>
+  <div class="why-tagline reveal">
+    「東涌代表台灣征服世界，<strong>改變世界用熱水的方式。</strong>」
+  </div>
+</section>
+
+<!-- ====== Packages ====== -->
+<section id="packages">
+  <div class="section-label reveal">Cooperation Packages</div>
+  <h2 class="section-title reveal">三大合作方案</h2>
+  <div class="rule reveal"></div>
+  <p class="subtitle reveal">依據您的品牌目標與預算，選擇最適合的傳播組合，以精準受眾實現最大影響力。</p>
+  <div class="pkg-layout">
+    <div class="pkg-card reveal">
+      <div class="pkg-name">Standard</div>
+      <div class="pkg-price">NT$1,673,000</div>
+      <div class="pkg-unit">起 · 含稅</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-list">
+        <li>WOW 影片系列製作</li>
+        <li>商周企業精選訪談</li>
+        <li>商周大調查機制</li>
+        <li>線上數位傳播</li>
+      </ul>
+    </div>
+    <div class="pkg-card featured reveal">
+      <div class="pkg-recommended">Most Popular</div>
+      <div class="pkg-name" style="color:rgba(255,255,255,.45)">Premium</div>
+      <div class="pkg-price">NT$2,389,000</div>
+      <div class="pkg-unit">起 · 含稅</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-list">
+        <li>Standard 方案全部內容</li>
+        <li>企業訪談影片加製</li>
+        <li>深度專題報導</li>
+        <li>社群媒體擴散</li>
+        <li>ESG 白皮書聯名發布</li>
+      </ul>
+    </div>
+    <div class="pkg-card reveal">
+      <div class="pkg-name">Flagship</div>
+      <div class="pkg-price">NT$4,395,000</div>
+      <div class="pkg-unit">起 · 含稅</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-list">
+        <li>Premium 方案全部內容</li>
+        <li>專屬論壇主辦（50 人邀請制）</li>
+        <li>業界思想領袖交流</li>
+        <li>B2B 最後一哩轉換</li>
+        <li>完整生態系傳播佈局</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section id="cta">
+  <div class="section-label" style="text-align:center;color:rgba(255,255,255,.35)">Contact Us</div>
+  <h2 class="section-title reveal" style="color:var(--white);text-align:center;max-width:600px;margin:0 auto 1.5rem">
+    下一個十年，<br>數據決定建築的高度
+  </h2>
+  <div class="cta-quote reveal">
+    「我們不只提供產品規格，<br>
+    我們提供透過十年現場運營驗證的<em>永續資產</em>。」
+  </div>
+  <p class="subtitle reveal" style="text-align:center;margin:0 auto 0">
+    立即預約提案說明，共同開創 ESG 永續建築的新標準。<br>每一立方公尺節省的瓦斯，都是達成淨零排放的真實貢獻。
+  </p>
+</section>
+
+<!-- ====== Footer ====== -->
+<footer>
+  <div class="foot-logo">
+    <div class="foot-logo-mark">東</div>
+    <div class="foot-logo-text">東涌 OUNOVA × 商業周刊</div>
+  </div>
+  <div class="foot-copy">© 2025 東湧實業股份有限公司 · 商周商務創新中心 · 版權所有</div>
+  <div class="foot-tag">Innovation · Energy Efficiency · Safety</div>
+</footer>
+
+<script>
+  // Scroll Reveal
+  const revEls = document.querySelectorAll('.reveal, .reveal-l, .reveal-r');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i % 5) * 0.08 + 's';
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revEls.forEach(el => io.observe(el));
+
+  // Counter
+  function counter(el, end) {
+    let start = 0, dur = 2000, t0;
+    const ease = t => t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+    const step = ts => {
+      if (!t0) t0 = ts;
+      const p = Math.min((ts - t0) / dur, 1);
+      el.textContent = Math.floor(ease(p) * end).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = end.toLocaleString();
+    };
+    requestAnimationFrame(step);
+  }
+  const whyIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('[data-count]').forEach(el => {
+          counter(el, +el.dataset.count);
+        });
+        whyIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.why-grid').forEach(el => whyIO.observe(el));
+</script>
+</body>
+</html>
